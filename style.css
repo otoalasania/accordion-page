@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(#af67e9, #6565e7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 1440px;
+  min-height: 100vh;
+  position: relative;
+  padding: 7em 1em;
+  color: #1d1e35;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+.accordion__item {
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.mainBox {
+  background: #fff;
+  border-radius: 25px;
+  width: 90%;
+  min-height: 450px;
+  margin: 0 auto;
+  background-image: url(./images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 15em;
+  background-position: center 0%;
+  padding: 46px 20px;
+}
+
+.mainBox .leftSide {
+  position: relative;
+}
+
+.mainBox .leftSide #girl {
+  position: absolute;
+  top: -9.5em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 15em;
+}
+
+.mainBox .rightSide {
+  padding-top: 5em;
+}
+
+.mainBox .rightSide h1 {
+  margin-bottom: 1em;
+  padding-left: .4em;
+}
+
+.mainBox #box {
+  display: none;
+}
+
+.mainBox .accordion__item {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  padding: 0.5em 1em;
+}
+
+.mainBox .accordion__item:hover {
+  background: #eeeeee;
+}
+
+.mainBox .question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  border: none;
+  margin: .5em 0;
+  background: transparent;
+  padding: 0;
+  font-size: .9rem;
+  font-family: 'Kumbh Sans', sans-serif;
+  cursor: pointer;
+}
+
+.mainBox .question.open {
+  font-weight: 700;
+}
+
+.mainBox .question::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 1em;
+  background-image: url(./images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin: .5em 0;
+}
+
+.mainBox .content {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  display: block;
+  padding: 0 1em 1em 0;
+}
+
+.mainBox .question.open {
+  font-weight: 700;
+}
+
+.mainBox .question.open::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.mainBox .answer.collapse {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .mainBox {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 900px;
+    height: auto;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-size: 45%;
+    background-position: -13% center;
+    padding: 50px 50px 50px 0;
+  }
+  .mainBox .leftSide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+  }
+  .mainBox .leftSide #girl {
+    top: auto;
+    left: auto;
+    top: 0%;
+    left: 0%;
+    -webkit-transform: translateX(-15%);
+            transform: translateX(-15%);
+    max-width: 100%;
+  }
+  .mainBox .rightSide {
+    padding-top: 0;
+  }
+  .mainBox #box {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 16em;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+  }
+  .leftSide, .rightSide {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */
